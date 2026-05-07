@@ -9,14 +9,14 @@ from EvaluationMan import EvaluationManager
 from NotificationService import NotificationService
 
 def main():
-    # Instantiate collaborators
+    #Instantiating collaborators
     validator = Validator()
     database = Database()
     reviewer_manager = ReviewerManager()
     evaluation_manager = EvaluationManager()
     notification_service = NotificationService()
 
-    # Create controller and UI
+    #Controller and UI
     controller = SubmissionController(validator, database, reviewer_manager, evaluation_manager, notification_service)
     ui = UI(controller)
 

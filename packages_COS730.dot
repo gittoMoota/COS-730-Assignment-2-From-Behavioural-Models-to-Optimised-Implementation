@@ -1,0 +1,24 @@
+digraph "packages_COS730" {
+rankdir=BT
+charset="utf-8"
+"src" [color="black", label=<src>, shape="box", style="solid"];
+"src.Database" [color="black", label=<src.Database>, shape="box", style="solid"];
+"src.EvaluationMan" [color="black", label=<src.EvaluationMan>, shape="box", style="solid"];
+"src.NotificationService" [color="black", label=<src.NotificationService>, shape="box", style="solid"];
+"src.Researcher" [color="black", label=<src.Researcher>, shape="box", style="solid"];
+"src.Reviewer" [color="black", label=<src.Reviewer>, shape="box", style="solid"];
+"src.ReviewerMan" [color="black", label=<src.ReviewerMan>, shape="box", style="solid"];
+"src.SubmissionCtrler" [color="black", label=<src.SubmissionCtrler>, shape="box", style="solid"];
+"src.UI" [color="black", label=<src.UI>, shape="box", style="solid"];
+"src.Validator" [color="black", label=<src.Validator>, shape="box", style="solid"];
+"src.main" [color="black", label=<src.main>, shape="box", style="solid"];
+"src.main" -> "src.Database" [arrowhead="open", arrowtail="none"];
+"src.main" -> "src.EvaluationMan" [arrowhead="open", arrowtail="none"];
+"src.main" -> "src.NotificationService" [arrowhead="open", arrowtail="none"];
+"src.main" -> "src.Researcher" [arrowhead="open", arrowtail="none"];
+"src.main" -> "src.Reviewer" [arrowhead="open", arrowtail="none"];
+"src.main" -> "src.ReviewerMan" [arrowhead="open", arrowtail="none"];
+"src.main" -> "src.SubmissionCtrler" [arrowhead="open", arrowtail="none"];
+"src.main" -> "src.UI" [arrowhead="open", arrowtail="none"];
+"src.main" -> "src.Validator" [arrowhead="open", arrowtail="none"];
+}

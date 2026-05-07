@@ -1,0 +1,13 @@
+digraph "classes_COS730" {
+rankdir=BT
+charset="utf-8"
+"src.Database.Database" [color="black", fontcolor="black", label=<{Database|<br ALIGN="LEFT"/>|fetch_reviewers()<br ALIGN="LEFT"/>save_submission(data)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"src.EvaluationMan.EvaluationManager" [color="black", fontcolor="black", label=<{EvaluationManager|<br ALIGN="LEFT"/>|apply_rules(average, consensus)<br ALIGN="LEFT"/>calculate_average(scores)<br ALIGN="LEFT"/>check_consensus(scores)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"src.NotificationService.NotificationService" [color="black", fontcolor="black", label=<{NotificationService|<br ALIGN="LEFT"/>|notify_acceptance()<br ALIGN="LEFT"/>notify_rejection()<br ALIGN="LEFT"/>notify_revision()<br ALIGN="LEFT"/>send_notification(message)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"src.Researcher.Researcher" [color="black", fontcolor="black", label=<{Researcher|ui<br ALIGN="LEFT"/>|submit_research_output(data)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"src.Reviewer.Reviewer" [color="black", fontcolor="black", label=<{Reviewer|<br ALIGN="LEFT"/>|save_score(score)<br ALIGN="LEFT"/>submit_score(score)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"src.ReviewerMan.ReviewerManager" [color="black", fontcolor="black", label=<{ReviewerManager|<br ALIGN="LEFT"/>|assign_review(reviewer)<br ALIGN="LEFT"/>check_workload(reviewer_list)<br ALIGN="LEFT"/>filter_conflicts(reviewer_list)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"src.SubmissionCtrler.SubmissionController" [color="black", fontcolor="black", label=<{SubmissionController|database<br ALIGN="LEFT"/>evaluation_manager<br ALIGN="LEFT"/>notification_service<br ALIGN="LEFT"/>reviewer_manager<br ALIGN="LEFT"/>validator<br ALIGN="LEFT"/>|submit(data)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"src.UI.UI" [color="black", fontcolor="black", label=<{UI|controller<br ALIGN="LEFT"/>|submit_research_output(data)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"src.Validator.Validator" [color="black", fontcolor="black", label=<{Validator|<br ALIGN="LEFT"/>|validate_format(data)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+}
