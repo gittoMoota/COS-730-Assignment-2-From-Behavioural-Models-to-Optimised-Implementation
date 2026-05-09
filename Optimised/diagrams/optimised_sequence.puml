@@ -1,0 +1,35 @@
+@startuml optimised_sequence
+actor Researcher
+participant UI
+participant SubmissionController
+participant Validator
+participant Database
+participant ReviewerManager
+participant EvaluationManager
+participant NotificationService
+
+Researcher -> UI: submitResearchOutput(data)
+UI -> SubmissionController: submit(data)
+
+SubmissionController -> Validator: validate(data)
+Validator --> SubmissionController: valid/invalid
+
+alt invalid
+    Validator -> NotificationService: notifyRejection("Invalid format")
+    NotificationService -> Researcher: sendNotification()
+else valid
+    SubmissionController -> Database: saveSubmission(data)
+    Database --> SubmissionController: confirmation
+
+    SubmissionController -> ReviewerManager: assignReviewers(submissionId)
+    ReviewerManager -> Database: fetchAndFilterReviewers()
+    ReviewerManager --> SubmissionController: assignedReviewers
+
+    SubmissionController -> EvaluationManager: evaluateSubmission(submissionId, assignedReviewers)
+    EvaluationManager -> Database: collectScores()
+    EvaluationManager -> EvaluationManager: performEvaluation() 
+    EvaluationManager --> NotificationService: outcome(accept/reject/revision)
+
+    NotificationService -> Researcher: sendNotification()
+end
+@enduml
