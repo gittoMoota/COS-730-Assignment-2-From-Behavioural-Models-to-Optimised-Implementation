@@ -48,7 +48,6 @@ EvaluationManager: Applying rules...
 NotificationService: Acceptance notification sent.
 NotificationService: Submission accepted
 ```
-
 This confirms the system executes end‑to‑end with all lifeline interactions visible.
 
 ---
