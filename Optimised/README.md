@@ -56,8 +56,7 @@ Execution evidence demonstrates functional equivalence with the baseline system:
 Each lifeline in the optimised sequence diagram is mapped to a corresponding class in the `Optimised/src` folder.  
 This ensures strict traceability between design artefacts, implementation, and test evidence.
 
-## Conclusion
-The optimised implementation:
+##The optimised implementation:
 - Aligns with the improved sequence diagram.  
 - Encapsulates responsibilities in dedicated classes.  
 - Produces outcomes consistent with the decision table rules (R1–R5).  
