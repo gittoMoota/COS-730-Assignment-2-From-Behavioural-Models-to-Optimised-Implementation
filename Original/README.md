@@ -1,5 +1,3 @@
-#Task 1: Baseline Implementation
-
 ## Overview
 This folder contains the baseline implementation (Correctness Phase) of the **Intelligent Submission and Review System**.  
 The code was implemented exactly as specified in the provided sequence diagram. No optimisations were introduced at this stage; placeholders were deliberately used to preserve the raw flow.
