@@ -5,19 +5,19 @@ The design achieves cleaner separation of concerns, centralised decision logic, 
 ## Folder Structure
 ```
 Optimised/
- ├── src/                  # Refactored Python source code
- │   ├── main.py           # Test driver script
- │   ├── UI.py             # User interface entry point
+ ├── src/                  #Refactored Python source code
+ │   ├── main.py           #Test driver script
+ │   ├── UI.py             #User interface entry point
  │   ├── SubmissionController.py
  │   ├── Validator.py
  │   ├── Database.py
  │   ├── ReviewerManager.py
  │   ├── EvaluationManager.py
  │   └── NotificationService.py
- ├── diagrams/             # Optimised sequence diagram
+ ├── diagrams/            
  │   ├── optimised_sequence.puml
- │   └── optimised_sequence.png
- └── README.md             # Documentation
+ │   └── optimised_sequence.png  #Optimised sequence diagram
+ └── README.md         
 ```
 
 ## Refactoring Highlights
