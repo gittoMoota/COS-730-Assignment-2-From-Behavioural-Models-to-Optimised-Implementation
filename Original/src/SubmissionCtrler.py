@@ -1,7 +1,9 @@
+from metrics import call_counter
+import metrics
 class SubmissionController:
     def __init__(self, validator, database, reviewer_manager, evaluation_manager, notification_service):
-        global call_counter
-        call_counter += 1
+        metrics.call_counter += 1
+        
         self.validator = validator
         self.database = database
         self.reviewer_manager = reviewer_manager
@@ -9,26 +11,26 @@ class SubmissionController:
         self.notification_service = notification_service
 
     def submit(self, data):
-        global call_counter
-        call_counter += 1
-        # Step 1: Validate format
+        metrics.call_counter += 1
+        
+        #Validating format
         valid = self.validator.validate_format(data)
         if not valid:
             # Invalid submission → notify researcher
             self.notification_service.send_notification("Error: Invalid format")
             return
 
-        # Step 2: Save submission
+        #Saving submission
         self.database.save_submission(data)
 
-        # Step 3: Fetch reviewers
+        #Fetch reviewers
         reviewer_list = self.database.fetch_reviewers()
 
-        # Step 4: Filter conflicts and workload
+        #Filtering conflicts and workload
         reviewer_list = self.reviewer_manager.filter_conflicts(reviewer_list)
         reviewer_list = self.reviewer_manager.check_workload(reviewer_list)
 
-        # Step 5: Assign reviewers (loop)
+        #Assigning reviewers (loop)
         for reviewer in reviewer_list:
             self.reviewer_manager.assign_review(reviewer)
             # Reviewer saves and submits score (placeholders for now)

@@ -1,5 +1,3 @@
-call_counter = 0
-
 from Researcher import Researcher
 from UI import UI
 from SubmissionCtrler import SubmissionController
@@ -9,6 +7,8 @@ from ReviewerMan import ReviewerManager
 from Reviewer import Reviewer
 from EvaluationMan import EvaluationManager
 from NotificationService import NotificationService
+
+import metrics
 
 def main():
     #Instantiating collaborators
@@ -27,6 +27,9 @@ def main():
 
     # Run baseline submission
     researcher.submit_research_output("Sample research data")
+    
+    print(f"Total method calls: {metrics.call_counter}")
+    metrics.call_counter = 0
 
 if __name__ == "__main__":
     main()
