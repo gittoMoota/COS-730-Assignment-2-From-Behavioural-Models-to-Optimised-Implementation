@@ -1,5 +1,3 @@
-#Task 1: Baseline Implementation
-
 ## Overview
 This folder contains the baseline implementation (Correctness Phase) of the **Intelligent Submission and Review System**.  
 The code was implemented exactly as specified in the provided sequence diagram. No optimisations were introduced at this stage; placeholders were deliberately used to preserve the raw flow.
@@ -9,14 +7,14 @@ The code was implemented exactly as specified in the provided sequence diagram. 
 ## 📂 Folder Structure
 ```
 Original/
-├── src/        # Python source codes for baseline implementation
-├── diagrams/   # Baseline UML diagrams (sequence/class)
-└── README.md   # Documentation for Task 1
+├── src/        #Python source codes for baseline implementation
+├── diagrams/   #Baseline sequence diagram
+└── README.md   
 ```
 
 ---
 
-## Class Mapping (Traceability)
+## Class Mapping > Traceability
 Each lifeline in the sequence diagram is mapped to a class:
 
 - **Researcher** → initiates submission via the UI  
