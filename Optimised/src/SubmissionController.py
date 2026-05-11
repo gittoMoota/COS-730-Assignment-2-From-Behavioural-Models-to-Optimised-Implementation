@@ -3,6 +3,8 @@ from Database import Database
 from ReviewerManager import ReviewerManager
 from EvaluationManager import EvaluationManager
 from NotificationService import NotificationService
+from metrics import call_counter
+
 
 class SubmissionController:
     def submit(self, data):

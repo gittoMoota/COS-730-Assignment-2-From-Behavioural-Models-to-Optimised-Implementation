@@ -1,5 +1,6 @@
+from metrics import call_counter
+import metrics
 class NotificationService:
     def send_notification(self, outcome):
-        global call_counter
-        call_counter += 1
+        metrics.call_counter += 1
         return f"Notification sent: {outcome}"
