@@ -6,6 +6,9 @@ from NotificationService import NotificationService
 
 class SubmissionController:
     def submit(self, data):
+        global call_counter
+        call_counter += 1
+        
         validator = Validator()
         if not validator.validate(data):
             return validator.reject_submission()
@@ -21,4 +24,6 @@ class SubmissionController:
 
         notification_service = NotificationService()
         return notification_service.send_notification(outcome)
+    
+    
 

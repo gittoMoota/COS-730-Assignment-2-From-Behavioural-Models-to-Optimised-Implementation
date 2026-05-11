@@ -1,5 +1,7 @@
 class SubmissionController:
     def __init__(self, validator, database, reviewer_manager, evaluation_manager, notification_service):
+        global call_counter
+        call_counter += 1
         self.validator = validator
         self.database = database
         self.reviewer_manager = reviewer_manager
@@ -7,6 +9,8 @@ class SubmissionController:
         self.notification_service = notification_service
 
     def submit(self, data):
+        global call_counter
+        call_counter += 1
         # Step 1: Validate format
         valid = self.validator.validate_format(data)
         if not valid:

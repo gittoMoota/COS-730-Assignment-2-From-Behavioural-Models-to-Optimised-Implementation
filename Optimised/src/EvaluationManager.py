@@ -1,5 +1,7 @@
 class EvaluationManager:
     def evaluate_submission(self, submission, reviewers):
+        global call_counter
+        call_counter += 1
         #Collect scores from submission input
         scores = submission.get("scores", [])
         if not reviewers or len(scores) == 0:

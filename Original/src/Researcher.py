@@ -3,4 +3,6 @@ class Researcher:
         self.ui = ui
 
     def submit_research_output(self, data):
+        global call_counter
+        call_counter += 1
         self.ui.submit_research_output(data)
