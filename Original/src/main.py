@@ -1,3 +1,5 @@
+call_counter = 0
+
 from Researcher import Researcher
 from UI import UI
 from SubmissionCtrler import SubmissionController

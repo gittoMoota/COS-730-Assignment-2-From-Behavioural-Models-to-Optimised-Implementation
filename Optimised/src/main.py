@@ -1,3 +1,5 @@
+call_counter = 0
+
 from UI import UI
 from SubmissionController import SubmissionController
 
