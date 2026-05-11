@@ -4,12 +4,12 @@ from ReviewerManager import ReviewerManager
 from EvaluationManager import EvaluationManager
 from NotificationService import NotificationService
 from metrics import call_counter
+import metrics
 
 
 class SubmissionController:
     def submit(self, data):
-        global call_counter
-        call_counter += 1
+        metrics.call_counter += 1
         
         validator = Validator()
         if not validator.validate(data):
