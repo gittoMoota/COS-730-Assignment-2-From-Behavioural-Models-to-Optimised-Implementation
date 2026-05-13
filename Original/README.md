@@ -1,20 +1,29 @@
+# COS730 Assignment 2 — Task 1: Baseline Implementation
+
 ## Overview
 This folder contains the baseline implementation (Correctness Phase) of the **Intelligent Submission and Review System**.  
 The code was implemented exactly as specified in the provided sequence diagram. No optimisations were introduced at this stage; placeholders were deliberately used to preserve the raw flow.
 
 ---
 
-## 📂 Folder Structure
+## Folder Structure
 ```
 Original/
-├── src/        #Python source codes for baseline implementation
-├── diagrams/   #Baseline sequence diagram
-└── README.md   
+├── src/        # Python source code for baseline implementation
+├── diagrams/   # Baseline UML diagrams (sequence/class)
+│   ├── Task6_Original-MethodCall&ExecutionTimes/   # Execution runtime screenshots
+│   │   ├── Orig_Run1-2.png  
+│   │   ├── Orig_Run3-4.png
+│   │   ├── Orig_Run5-6.png
+│   │   ├── Orig_Run7-8.png
+│   │   ├── Orig_Run9-10.png  
+│   │   └── Orig_Run11-12.png
+└── README.md   # Documentation for Task 1
 ```
 
 ---
 
-## Class Mapping > Traceability
+## Class Mapping (Traceability)
 Each lifeline in the sequence diagram is mapped to a class:
 
 - **Researcher** → initiates submission via the UI  
@@ -38,20 +47,16 @@ Database: Saving submission...
 Database: Fetching reviewers...
 ReviewerManager: Filtering conflicts...
 ReviewerManager: Checking workload...
-SubmissionController: Assigning reviewer...
-EvaluationManager: Starting evaluation...
 EvaluationManager: Calculating average...
 EvaluationManager: Checking consensus...
 EvaluationManager: Applying rules...
 NotificationService: Acceptance notification sent.
 NotificationService: Submission accepted
+Execution time: 0.41–1.45 ms (across repeated runs)
+Total method calls: 12
 ```
-This confirms the system executes end‑to‑end with all lifeline interactions visible.
 
----
+This confirms the system executes end‑to‑end with all lifeline interactions visible.  
+The global counter consistently reports **12 method calls**, which is one more than the 11 interactions in the baseline diagram. The discrepancy arises because an additional helper/constructor method is being instrumented with `count_call()`. This is documented in **Task 6** as part of the empirical evaluation.
 
-## 📖 Notes
-- This baseline implementation intentionally preserves inefficiencies for later analysis in **Task 2**.  
-- Optimised diagrams and refactored code will be placed in the `Optimised/` folder.  
-```
 
