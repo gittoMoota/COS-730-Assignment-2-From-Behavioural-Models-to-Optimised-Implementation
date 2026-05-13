@@ -6,5 +6,6 @@ class Database:
         print("Database: Saving submission...")
 
     def fetch_reviewers(self):
+        metrics.call_counter += 1
         print("Database: Fetching reviewers...")
         return []

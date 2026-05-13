@@ -6,50 +6,60 @@ from Database import Database
 from ReviewerManager import ReviewerManager
 from EvaluationManager import EvaluationManager
 from NotificationService import NotificationService
+
 import metrics
+import time
 
 def run_tests():
     ui = UI()
 
-    #Use case 1: Invalid submission (missing title)
+    # Use case 1: Invalid submission (missing title)
     print("Test 1: Invalid submission")
+    start = time.perf_counter()
     result = ui.receive_submission({"content": "no title here"})
+    end = time.perf_counter()
     print("Outcome:", result)
+    print(f"Execution time: {(end - start) * 1000:.2f} ms")
     print(f"Total method calls: {metrics.call_counter}")
     metrics.call_counter = 0
 
-
-    #Use case 2: Valid submission but no reviewers
+    # Use case 2: Valid submission but no reviewers
     print("\nTest 2: No reviewers available")
-    # simulate ReviewerManager returning empty list
+    start = time.perf_counter()
     result = ui.receive_submission({"title": "Research Output", "force_no_reviewers": True})
+    end = time.perf_counter()
     print("Outcome:", result)
+    print(f"Execution time: {(end - start) * 1000:.2f} ms")
     print(f"Total method calls: {metrics.call_counter}")
     metrics.call_counter = 0
 
-
-    #Use case 3: Valid submission with low scores
+    # Use case 3: Valid submission with low scores
     print("\nTest 3: Low scores")
+    start = time.perf_counter()
     result = ui.receive_submission({"title": "Research Output", "scores": [1, 2, 2]})
+    end = time.perf_counter()
     print("Outcome:", result)
+    print(f"Execution time: {(end - start) * 1000:.2f} ms")
     print(f"Total method calls: {metrics.call_counter}")
     metrics.call_counter = 0
 
-
-    #Use case 4: Valid submission with moderate scores
+    # Use case 4: Valid submission with moderate scores
     print("\nTest 4: Moderate scores")
+    start = time.perf_counter()
     result = ui.receive_submission({"title": "Research Output", "scores": [3, 3, 4]})
+    end = time.perf_counter()
     print("Outcome:", result)
-    
+    print(f"Execution time: {(end - start) * 1000:.2f} ms")
     print(f"Total method calls: {metrics.call_counter}")
     metrics.call_counter = 0
 
-    
-    #Use case 5: Valid submission with high scores
+    # Use case 5: Valid submission with high scores
     print("\nTest 5: High scores")
+    start = time.perf_counter()
     result = ui.receive_submission({"title": "Research Output", "scores": [5, 5, 4]})
+    end = time.perf_counter()
     print("Outcome:", result)
-    
+    print(f"Execution time: {(end - start) * 1000:.2f} ms")
     print(f"Total method calls: {metrics.call_counter}")
     metrics.call_counter = 0
 
