@@ -5,9 +5,11 @@ The design achieves cleaner separation of concerns, centralised decision logic, 
 ## Folder Structure
 ```
 Optimised/
- ├── src/                  #Refactored Python source code
+ ├── src/                  #Refactored Python source codes
  │   ├── main.py           #Test driver script
  │   ├── UI.py             #User interface entry point
+ │   ├── Researcher.py
+ │   ├── metrics.py        #Count for method calls/intercations
  │   ├── SubmissionController.py
  │   ├── Validator.py
  │   ├── Database.py
@@ -15,7 +17,18 @@ Optimised/
  │   ├── EvaluationManager.py
  │   └── NotificationService.py
  ├── diagrams/            
- │   ├── optimised_sequence.puml
+ │   ├── Task6_Optimised-Execution Times/  # Execution runs & times Screnshots folder
+ |       ├── Opt_Run1.png
+ |       ├── Opt_Run2.png
+ |       ├── Opt_Run3.png
+ |       ├── Opt_Run4.png
+ |       ├── Opt_Run5.png
+ |       ├── Opt_Run6.png
+ |       ├── Opt_Run7.png
+ |       ├── Opt_Run8.png
+ |       ├── Opt_Run9.png
+ |       ├── Opt_Run10.png
+ |   ├── otimised_sequence.puml
  │   └── optimised_sequence.png  #Optimised sequence diagram
  └── README.md         
 ```
