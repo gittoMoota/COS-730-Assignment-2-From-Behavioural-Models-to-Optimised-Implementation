@@ -9,17 +9,11 @@ The design achieves cleaner separation of concerns, centralised decision logic, 
 ## 📂 Folder Structure
 ```
 Optimised/
-<<<<<<< HEAD
- ├── src/                  # Refactored Python source code
- │   ├── main.py           # Test driver script
- │   ├── UI.py             # User interface entry point
-=======
  ├── src/                  #Refactored Python source codes
  │   ├── main.py           #Test driver script
  │   ├── UI.py             #User interface entry point
  │   ├── Researcher.py
  │   ├── metrics.py        #Count for method calls/intercations
->>>>>>> b14bd286f94442b07064e5e93ee8997357dcd668
  │   ├── SubmissionController.py
  │   ├── Validator.py
  │   ├── Database.py
@@ -27,17 +21,7 @@ Optimised/
  │   ├── EvaluationManager.py
  │   └── NotificationService.py
  ├── diagrams/            
-<<<<<<< HEAD
- │   ├── optimised_sequence.puml
- │   └── optimised_sequence.png   # Optimised sequence diagram
- │   └── Task6_Optimised-MethodCall&ExecutionTimes/   # Execution runtime screenshots
- │       ├── Opt_Run1-2.png
- │       ├── Opt_Run3-4.png
- │       ├── Opt_Run5-6.png
- │       ├── Opt_Run7-8.png
- │       └── Opt_Run9-10.png
-=======
- │   ├── Task6_Optimised-Execution Times/  # Execution runs & times Screnshots folder
+ │   ├── Task6_Optimised-Execution Times/  #Execution runs & times Screnshots folder
  |       ├── Opt_Run1.png
  |       ├── Opt_Run2.png
  |       ├── Opt_Run3.png
@@ -49,8 +33,8 @@ Optimised/
  |       ├── Opt_Run9.png
  |       ├── Opt_Run10.png
  |   ├── otimised_sequence.puml
- │   └── optimised_sequence.png  #Optimised sequence diagram
->>>>>>> b14bd286f94442b07064e5e93ee8997357dcd668
+ |   ├── optimised_sequence.png            #Optimised sequence diagram
+ │   └── T6_Optimised_methodCall.png       # Number of method interactions on the Optimised system
  └── README.md         
 ```
 

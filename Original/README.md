@@ -12,12 +12,11 @@ Original/
 ├── src/        # Python source code for baseline implementation
 ├── diagrams/   # Baseline UML diagrams (sequence/class)
 │   ├── Task6_Original-MethodCall&ExecutionTimes/   # Execution runtime screenshots
-│   │   ├── Orig_Run1-2.png  
-│   │   ├── Orig_Run3-4.png
-│   │   ├── Orig_Run5-6.png
-│   │   ├── Orig_Run7-8.png
-│   │   ├── Orig_Run9-10.png  
-│   │   └── Orig_Run11-12.png
+│       ├── Orig_Run1-2.png  
+│       ├── Orig_Run3-4.png
+│       ├── Orig_Run5-6.png
+│       ├── Orig_Run7-8.png
+│       └──  Orig_Run9-10.png 
 └── README.md   # Documentation for Task 1
 ```
 
@@ -57,6 +56,6 @@ Total method calls: 12
 ```
 
 This confirms the system executes end‑to‑end with all lifeline interactions visible.  
-The global counter consistently reports **12 method calls**, which is one more than the 11 interactions in the baseline diagram. The discrepancy arises because an additional helper/constructor method is being instrumented with `count_call()`. This is documented in **Task 6** as part of the empirical evaluation.
+The global counter consistently reports **12 method calls**, which is one more than the 11 interactions in the baseline diagram. The discrepancy arises because an additional helper/constructor method is being instrumented with `call_counter()`. This is documented in **Task 6** as part of the empirical evaluation.
 
 
